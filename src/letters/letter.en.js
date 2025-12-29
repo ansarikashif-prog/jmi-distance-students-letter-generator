@@ -9,13 +9,23 @@ const englishLetter = ({ fullName, rollNumber, enrollmentNumber, phoneNumber, is
   if (!fullName || !rollNumber || !enrollmentNumber || !phoneNumber) return '';
 
   const booksSection = `
-In addition to this, several students have still not received complete prescribed study material for subjects such as BEG-04, BEG-05, BHD-04, and BHD-05 due to stock unavailability. The absence of essential books, combined with limited preparation time, makes it academically unreasonable to expect quality assignment submissions within strict deadlines.
+In addition to the above, a large number of students are still deprived of essential prescribed study material for subjects including BEG-04, BEG-05, BHD-04, and BHD-05. Even at this advanced stage of the academic cycle, complete sets of books have not been provided to many students.
+
+The non-availability of these books has directly affected students’ ability to study course content, understand the syllabus framework, and prepare assignments in a meaningful academic manner. Expecting students to complete assignments on time without providing them with the officially prescribed study material is academically unjust and defeats the purpose of structured distance education. This situation has caused serious academic disadvantage and mental stress among students.
 `;
 
   const assignmentSection = `
-Recently, with the announcement of offline classes, students were unexpectedly informed that assignments for language papers were to be submitted within a very short timeframe. This abrupt communication has left students with insufficient time even to plan, let alone prepare academically sound submissions.
+With respect to assignments, students were informed after the declaration of results that assignments for language papers were to be submitted within an extremely short and rigid timeframe. As of now, the date of 28 December has already passed, and students have been informed that submissions beyond this date would attract penalties, as communicated by the concerned faculty.
 
-The situation is further aggravated by the requirement of hardcopy submission. For students residing outside Delhi, this poses a serious and often impractical challenge. While attendance in offline classes may remain optional for outstation students without direct academic loss, assignment submission through physical means places them at a clear disadvantage. In many cases, timely hardcopy submission is neither logistically feasible nor financially sustainable.
+It is important to highlight that the time provided for assignment preparation was insufficient for a large section of students. Many students could not realistically complete academic assignments of required quality within such a limited period, especially after a prolonged phase of academic uncertainty.
+
+The situation has further worsened due to the mandatory hardcopy submission requirement. Students are spread across distant regions including remote areas of Delhi, Delhi NCR, Dasna, Bijnor, Bihar, and even cities as far as Mumbai. For many students, reaching the campus itself requires two to three hours of travel one way. Several students, despite making sincere efforts to reach the college, arrived late by 20–30 minutes only to find that faculty members or coordinators were unavailable, forcing them to return without submitting assignments.
+
+In such cases, students not only lose valuable time and financial resources but are later informed that assignments can now only be submitted with penalties. This has resulted in deep frustration and a sense of helplessness among students.
+
+Furthermore, it has been observed that some students have been subjected to discouraging remarks for not attending offline classes. It is respectfully submitted that attendance in offline classes is not a mandatory criterion for assignment submission or award of marks in the ODL programme. Many students are unable to attend physical classes due to distance, employment, or personal constraints, and this should not result in academic or verbal discouragement.
+
+Considering these ground realities, the existing assignment submission mechanism has unintentionally excluded a significant number of students.
 `;
 
   let issueText = '';
@@ -26,23 +36,25 @@ The situation is further aggravated by the requirement of hardcopy submission. F
   return `
 Respected Sir,
 
-I, a student of the BA (ODL) programme under the Centre for Distance and Online Education, Jamia Millia Islamia, write this letter with due respect to formally place my academic concerns on record.
+I, a student of the BA (ODL) programme under the Centre for Distance and Online Education, Jamia Millia Islamia, respectfully submit this representation to formally place certain pressing academic concerns on record.
 
-At the outset, I would like to sincerely acknowledge and express my gratitude for the declaration of the Second Year BA (ODL) results on 18 December 2025. After an extended period of uncertainty and repeated follow-ups by students, the declaration of results has finally provided clarity regarding subject-wise academic status, including pass and backlog outcomes.
+At the outset, I sincerely acknowledge and appreciate the declaration of the Second Year BA (ODL) results on 18 December 2025. After an extended period of uncertainty and repeated follow-ups by students, the release of results has finally brought clarity regarding subject-wise academic standing, including pass and backlog status.
 
-While the declaration of results is appreciated, it has simultaneously brought to light a set of urgent academic challenges, particularly concerning assignments and backlog preparation, which now require immediate and thoughtful attention.
+However, the declaration of results has simultaneously exposed several unresolved academic issues that now demand immediate and practical intervention, particularly concerning assignment submission and backlog preparation.
 
-Over the past two academic years, the BA (ODL) programme has not followed a consistent academic timeline. The first year extended over approximately 15–17 months, while the second year was completed within a highly compressed span of about 7–8 months. Due to this irregularity, students were unable to anticipate academic milestones in advance and were neither academically nor mentally prepared for sudden assignment announcements.
+Over the past two academic years, the BA (ODL) programme has suffered from an inconsistent academic timeline. While the first year extended over approximately 15–17 months, the second year was completed within a highly compressed span of merely 7–8 months. This irregular academic structure left students unable to anticipate deadlines, plan studies effectively, or prepare themselves mentally and academically for sudden announcements.
 
 ${issueText}
 
-These concerns are not raised in opposition, but with the intent of ensuring that the purpose of result declaration is meaningfully fulfilled by enabling students to address their academic shortcomings in a fair, structured, and humane manner.
+These concerns are raised not in opposition, but in the sincere interest of ensuring fairness, academic integrity, and accessibility for all distance learning students.
 
-In light of the above, I respectfully submit the following requests for your kind consideration:
+In light of the circumstances explained above, I respectfully request your kind consideration of the following:
 
-${issueType !== 'Books' ? `-- The deadline for submitting assignments should be extended, as the given time is too short.
--- Reconsideration of the hardcopy-only submission requirement, with sincere efforts toward enabling online or alternative submission modes, especially for outstation students.` : ''}
-${issueType !== 'Assignment' ? `-- Immediate resolution of incomplete study material distribution and assurance of timely availability of prescribed books for all subjects.` : ''}
+${issueType !== 'Books' ? `-- Extension of the assignment submission deadline without any penalty, considering the insufficient preparation time provided.
+-- Permission for online submission of assignments, or the introduction of a flexible alternative to hardcopy submission, so that students residing far from the campus are not unfairly disadvantaged.` : ''}
+
+${issueType !== 'Assignment' ? `-- Immediate resolution of pending study material distribution and assurance that all prescribed books are provided to students well in advance of academic requirements.` : ''}
+
 My details are provided below for your reference:
 
 - Name: ${fullName}  
@@ -50,7 +62,9 @@ My details are provided below for your reference:
 - Enrollment Number: ${enrollmentNumber}  
 - Contact Number: ${phoneNumber}  
 
-I submit this representation with due respect and sincere hope that these concerns will be examined sympathetically and addressed in the best academic interest of distance learning students.
+I submit this representation with due respect and sincere hope that these genuine academic concerns will be examined sympathetically and addressed in the best interest of students enrolled in the BA (ODL) programme.
+
+Yours sincerely,
 `.trim();
 };
 
