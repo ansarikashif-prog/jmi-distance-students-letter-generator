@@ -103,11 +103,12 @@ const App = () => {
     const to = encodeURIComponent(
       'mrizvi@jmi.ac.in,c.smoinuddin@jmi.ac.in'
     );
+    
+    const cc = encodeURIComponent('vc@jmi.in');
 
-    const bcc = encodeURIComponent('vc@jmi.in');
 
-    window.location.href =
-      `mailto:${to}?bcc=${bcc}&subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${to}?cc=${cc}&subject=${subject}&body=${body}`;
+
   };
 
   // ===============================
