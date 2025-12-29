@@ -82,7 +82,7 @@ const StudentForm = ({ onSubmit }) => {
             type="text"
             value={formData.fullName}
             onChange={handleChange}
-            placeholder="e.g. Zainab"
+            placeholder="e.g. Abdullah"
             required
             aria-invalid={Boolean(errors.fullName)}
             aria-describedby={errors.fullName ? 'fullName-error' : undefined}
