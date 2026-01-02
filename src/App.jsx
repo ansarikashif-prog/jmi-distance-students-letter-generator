@@ -101,10 +101,10 @@ const App = () => {
     );
 
     const to = encodeURIComponent(
-      'mrizvi@jmi.ac.in,c.smoinuddin@jmi.ac.in,mhaque4@jmi.ac.in,g.mgaffar@jmi.ac.in'
+      'mrizvi@jmi.ac.in,c.smoinuddin@jmi.ac.in'
     );
     
-    const cc = encodeURIComponent('vc@jmi.in');
+    const cc = encodeURIComponent('vc@jmi.in,mhaque4@jmi.ac.in,g.mgaffar@jmi.ac.in');
 
 
     window.location.href = `mailto:${to}?cc=${cc}&subject=${subject}&body=${body}`;
