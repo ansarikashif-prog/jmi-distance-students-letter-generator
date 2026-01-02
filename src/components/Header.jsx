@@ -11,7 +11,7 @@ const Header = () => {
       <div className="app-header-inner">
         <h1 className="app-title">Student Academic Support Letter Generator</h1>
         <p className="app-subtitle">
-          Generate letters to Demand Classes in Offline mode.
+         Developed by -Kashif Ansari-
         </p>
       </div>
     </header>
