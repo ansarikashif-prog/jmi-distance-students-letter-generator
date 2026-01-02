@@ -29,7 +29,7 @@ const LanguageToggle = ({ language, onChange }) => {
           onClick={() => onChange('hi')}
           aria-pressed={language === 'hi'}
         >
-          हिंदी
+          Hinglish
         </button>
       </div>
     </div>

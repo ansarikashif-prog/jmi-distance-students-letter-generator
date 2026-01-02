@@ -101,7 +101,7 @@ const App = () => {
     );
 
     const to = encodeURIComponent(
-      'mrizvi@jmi.ac.in,c.smoinuddin@jmi.ac.in'
+      'mrizvi@jmi.ac.in,c.smoinuddin@jmi.ac.in,mhaque4@jmi.ac.in,g.mgaffar@jmi.ac.in'
     );
     
     const cc = encodeURIComponent('vc@jmi.in');

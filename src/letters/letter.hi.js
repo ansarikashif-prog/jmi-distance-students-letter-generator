@@ -1,71 +1,85 @@
 /**
  * src/letters/letter.hi.js
- * Hindi Letter Template
- * Context: Result declaration acknowledged, focus on assignment-related concerns
+ * Hinglish Letter Template
+ * Context: Academic support with primary focus on Offline Classes
  * Input: studentData = { fullName, rollNumber, enrollmentNumber, phoneNumber, issueType }
- * Tone: Respectful, firm, student-centric
+ * Tone: Respectful, firm, student-centric (Hinglish)
  */
 
-const hindiLetter = (studentData) => {
-  if (!studentData) return '';
+const hindiLetter = ({ fullName, rollNumber, enrollmentNumber, phoneNumber, issueType = 'All' }) => {
+  if (!fullName || !rollNumber || !enrollmentNumber || !phoneNumber) return '';
 
-  const { fullName, rollNumber, enrollmentNumber, phoneNumber, issueType = 'Both' } = studentData;
+  const offlineSection = `
+Admission ke waqt maine BA (ODL) programme ke liye explicitly OFFLINE mode opt kiya tha. Iska seedha aur logical matlab yeh tha ke counselling sessions, academic discussions aur programme-related interactions Learner Support Centre par physical mode mein conduct kiye jaayenge. Yeh koi personal assumption nahi thi, balki iska clear reference khud Programme Guide mein maujood hai.
+
+Programme Guide ke mutabiq counselling sessions normally centre par hote hain, weekend ke academic schedule ke andar conduct kiye jaate hain, aur inka purpose students ke subject-related academic doubts clear karna hota hai. Yeh bhi clearly mention hai ke counselling sessions conventional classroom teaching nahi hote, lekin phir bhi unka physical presence ke saath centre par hona programme structure ka ek integral hissa hai, na ke koi optional administrative choice.
+
+Is documented position ke bawajood, pichhle do academic saalon mein mere programme ke saare counselling sessions 100% online mode mein conduct kiye gaye, jabki maine admission ke time offline mode select kiya tha. Is poore duration mein na to students se koi consent liya gaya aur na hi Programme Guide ke framework ke mutabiq kisi justified exception ko formally communicate kiya gaya.
+
+Is wajah se offline mode ka jo academic aur institutional meaning hai, woh practically dilute ho gaya. Offline aur online mode ke beech ka farq sirf naam tak limited reh gaya, jabki actual delivery structure poori tarah online hi raha.
+
+Maujooda academic year, jo mera third year hai, usmein bhi situation mein koi fundamental correction nahi hui. Is baar ek 60:40 ka hybrid ratio introduce kiya gaya, jo ek administrative decision ke taur par impose kiya gaya hai, jabki iska koi clear academic ya regulatory basis Programme Guide mein mention nahi hai. Is hybrid model ke tehat sirf kuch selected language subjects ke liye limited offline sessions arrange kiye gaye hain, jabki baaki theory papers ke counselling sessions abhi bhi online hi rakhe gaye hain.
+
+Is tarah ka selective offline arrangement offline mode ke core academic purpose ko satisfy nahi karta. Balki yeh impression deta hai ke offline counselling sessions ko ek favour ya concession ke taur par treat kiya ja raha hai, na ke ek promised aur documented academic mode ke taur par.
+
+Mere liye offline counselling ka matlab yeh nahi hai ke attendance mandatory ho ya har student par physical presence impose ki jaaye. Offline mode ka matlab yeh hai ke counselling sessions ka mode offline ho, jaisa ke Programme Guide mein envisaged hai, taaki jo students centre par physically attend karna chahte hain, unke liye yeh facility actually available ho.
+
+Hybrid ya predominantly online models is basic expectation ko fulfill nahi karte, khaaskar jab pichhle do academic saalon se already complete online delivery ho chuki ho. Is wajah se current arrangement na sirf Programme Guide ke spirit ke khilaaf lagta hai, balki offline mode opt karne ke mere admission-time decision ko bhi effectively undermine karta hai.
+
+Isi liye meri demand bilkul clear aur unambiguous hai: offline mode opt karne wale students ke liye counselling sessions 100% offline mode mein conduct kiye jaayen — bina kisi arbitrary ratio ke, bina selective subjects tak limited kiye hue, aur bina student consent ke impose kiye gaye hybrid models ke. Yeh koi additional facility ya extraordinary request nahi hai, balki wahi academic arrangement hai jo admission ke waqt explicitly understood aur documented tha, aur jiska consistent implementation abhi tak nahi hua hai.
+`;
 
   const booksSection = `
-इसके अतिरिक्त, यह अत्यंत चिंताजनक है कि BEG-04, BEG-05, BHD-04 और BHD-05 जैसे कई विषयों की निर्धारित अध्ययन सामग्री अभी तक बड़ी संख्या में छात्रों को प्राप्त नहीं हुई है। आधिकारिक रूप से निर्धारित पुस्तकों के अभाव में न तो पाठ्यक्रम को ठीक से समझा जा सकता है और न ही असाइनमेंट की अकादमिक तैयारी संभव हो पाती है।
+Iske alawa, kaafi students ko abhi tak prescribed study material properly receive nahi hua hai, khaaskar BEG-04, BEG-05, BHD-04 aur BHD-05 jaise subjects ke liye.
 
-बिना आवश्यक पुस्तकों के छात्रों से समयबद्ध और गुणवत्तापूर्ण असाइनमेंट की अपेक्षा करना शैक्षणिक रूप से अनुचित है। इससे न केवल छात्रों की पढ़ाई प्रभावित हो रही है, बल्कि मानसिक तनाव और असमान शैक्षणिक स्थिति भी उत्पन्न हो रही है।
+Books ki delayed ya incomplete availability ki wajah se students apni studies ko systematically plan nahi kar pa rahe hain. ODL programme ka foundation hi self-study material par based hota hai, aur jab wahi timely available na ho, toh poora academic structure weak ho jaata hai.
 `;
 
   const assignmentSection = `
-हाल ही में परिणाम घोषित होने के तुरंत बाद यह सूचना दी गई कि भाषा विषयों के असाइनमेंट बहुत कम समय में जमा करने होंगे। वर्तमान में 28 दिसंबर की तिथि भी निकल चुकी है और यह बताया गया है कि अब असाइनमेंट जमा करने पर पेनल्टी लगेगी, जैसा कि संबंधित शिक्षक द्वारा सूचित किया गया।
+Assignments ke context mein bhi kaafi practical difficulties saamne aayi hain. Results declare hone ke baad hi assignments ki information di gayi, woh bhi extremely short timeframe ke saath. Hardcopy submission ko mandatory banana, especially un students ke liye jo door-daraz areas mein rehte hain, ek serious challenge ban gaya.
 
-यह तथ्य अत्यंत महत्वपूर्ण है कि छात्रों को असाइनमेंट तैयार करने के लिए न तो पर्याप्त समय दिया गया और न ही पहले से कोई स्पष्ट अकादमिक योजना साझा की गई। इतने कम समय में गुणवत्तापूर्ण असाइनमेंट तैयार करना अधिकांश छात्रों के लिए व्यावहारिक रूप से संभव नहीं था।
-
-स्थिति और अधिक गंभीर तब हो जाती है जब असाइनमेंट की हार्डकॉपी जमा करना अनिवार्य कर दिया गया। BA (ODL) कार्यक्रम के छात्र दिल्ली के दूर-दराज़ इलाकों, दिल्ली NCR, दासना, बिजनौर, बिहार और यहां तक कि मुंबई जैसे दूरस्थ क्षेत्रों में रहते हैं। कई छात्रों को कॉलेज पहुंचने में एक तरफ़ से ही 2–3 घंटे का समय लग जाता है।
-
-कई मामलों में छात्र कठिन परिस्थितियों के बावजूद कॉलेज पहुंचते हैं, लेकिन 20–30 मिनट की देरी होने पर न तो शिक्षक मिलते हैं और न ही कोऑर्डिनेटर। घंटों इंतज़ार करने के बाद छात्रों को बिना असाइनमेंट जमा किए वापस लौटना पड़ता है, और बाद में यह बताया जाता है कि अब केवल पेनल्टी के साथ ही असाइनमेंट स्वीकार किए जाएंगे। इससे छात्रों को समय, धन और मानसिक ऊर्जा तीनों का नुकसान होता है।
-
-इसके अलावा, यह भी देखा गया है कि कुछ छात्रों को ऑफलाइन कक्षाओं में उपस्थित न होने को लेकर ताने या नकारात्मक टिप्पणियाँ सुननी पड़ी हैं। यह विनम्रतापूर्वक निवेदन है कि ODL कार्यक्रम में न तो कक्षाओं की उपस्थिति अनिवार्य है और न ही असाइनमेंट जमा करने या अंक देने के लिए इसकी कोई बाध्यता निर्धारित है। कई छात्र दूरी, रोजगार या व्यक्तिगत कारणों से ऑफलाइन कक्षाओं में उपस्थित नहीं हो पाते, और इसे किसी भी रूप में छात्रों के विरुद्ध नहीं लिया जाना चाहिए।
-
-इन परिस्थितियों के कारण बड़ी संख्या में छात्र असाइनमेंट समय पर जमा नहीं कर पाए हैं।
+Kaafi students ne genuine efforts ke bawajood assignments submit nahi kar paaye, ya toh travel issues ki wajah se ya phir administrative coordination ke lack ki wajah se. Aisi situations mein penalty impose karna students ke liye academic aur mental stress ka cause ban raha hai.
 `;
 
   let issueText = '';
-  if (issueType === 'Books') issueText = booksSection;
+  if (issueType === 'OfflineClasses') issueText = offlineSection;
+  else if (issueType === 'Books') issueText = booksSection;
   else if (issueType === 'Assignment') issueText = assignmentSection;
-  else if (issueType === 'Both') issueText = assignmentSection + booksSection;
+  else if (issueType === 'All') issueText = offlineSection + assignmentSection + booksSection;
 
   return `
-माननीय महोदय,
+Respected Sir,
 
-मैं Jamia Millia Islamia के Centre for Distance and Online Education के अंतर्गत संचालित BA (ODL) कार्यक्रम का छात्र होने के नाते, यह पत्र पूरे सम्मान और विनम्रता के साथ प्रस्तुत कर रहा हूँ, ताकि कुछ गंभीर शैक्षणिक समस्याओं की ओर आपका ध्यान आकर्षित किया जा सके।
+Main Centre for Distance and Online Education, Jamia Millia Islamia ke under BA (ODL) programme ka ek student hoon, aur poore respect ke saath yeh representation submit kar raha hoon taaki kuch important academic concerns formally record par laaye jaa saken.
 
-सर्वप्रथम, मैं द्वितीय वर्ष BA (ODL) के परिणाम 18 दिसंबर 2025 को घोषित किए जाने के लिए आपका आभार व्यक्त करना चाहता हूँ। लंबे समय से चली आ रही अनिश्चितता के बाद परिणाम घोषित होने से छात्रों को अपनी विषयवार शैक्षणिक स्थिति, पास एवं बैकलॉग की स्पष्ट जानकारी प्राप्त हुई है।
+Sabse pehle, Second Year BA (ODL) ke results 18 December 2025 ko declare hone ke liye main sincerely acknowledge karta hoon. Results ke baad students ko apni academic standing ke baare mein clarity mili hai, jo kaafi time se pending thi.
 
-हालाँकि, परिणाम घोषणा के साथ ही कुछ महत्वपूर्ण शैक्षणिक समस्याएँ भी सामने आई हैं, विशेष रूप से असाइनमेंट और अध्ययन सामग्री से संबंधित, जिन पर तत्काल और व्यावहारिक निर्णय आवश्यक प्रतीत होता है।
-
-पिछले दो शैक्षणिक वर्षों में BA (ODL) कार्यक्रम की समय-सारणी लगातार असंतुलित रही है। जहाँ प्रथम वर्ष लगभग 15–17 महीनों में पूरा हुआ, वहीं द्वितीय वर्ष मात्र 7–8 महीनों में संक्षिप्त कर दिया गया। इस असमानता के कारण छात्र न तो समय रहते तैयारी कर पाए और न ही अचानक घोषित असाइनमेंट के लिए मानसिक रूप से तैयार थे।
+Lekin post-result phase mein kuch deeper structural issues clearly highlight ho gaye hain, jismein sabse zyada serious concern offline academic support ko lekar hai, jo ODL students ke liye admission ke waqt samjha gaya tha, lekin ground level par consistently implement nahi ho paaya hai.
 
 ${issueText}
 
-उपरोक्त तथ्यों के आधार पर, मैं विनम्रतापूर्वक निम्न अनुरोध प्रस्तुत करता हूँ:
+Yeh saare concerns kisi bhi tarah ke opposition ke liye nahi, balki academic fairness, accessibility aur BA (ODL) programme ke smooth aur credible functioning ke interest mein raise kiye ja rahe hain.
 
-${issueType !== 'Books' ? `1) असाइनमेंट जमा करने की अंतिम तिथि बिना किसी पेनल्टी के बढ़ाई जाए।  
-2) हार्डकॉपी सबमिशन की अनिवार्यता पर पुनर्विचार करते हुए ऑनलाइन या वैकल्पिक सबमिशन की सुविधा प्रदान की जाए, ताकि दूर-दराज़ के छात्र भी समान रूप से लाभान्वित हो सकें।` : ''}
+Is context mein, main aapse respectfully request karta hoon ke neeche diye gaye points par kind consideration di jaaye:
 
-${issueType !== 'Assignment' ? `3) अपूर्ण अध्ययन सामग्री के वितरण की समस्या का शीघ्र समाधान किया जाए तथा सभी निर्धारित पुस्तकों की समयबद्ध उपलब्धता सुनिश्चित की जाए।` : ''}
+${issueType === 'OfflineClasses' || issueType === 'All' ? `-- Offline mode opt karne wale BA (ODL) students ke liye counselling sessions 100% offline mode mein conduct kiye jaayen, bina kisi arbitrary hybrid ratio ke.
+-- Offline classes ke liye proper prior notice, subject-wise schedule aur transparency ensure ki jaaye.
+-- Yeh formally clarify kiya jaaye ke offline classes attend na kar paane ki wajah se students ko academically disadvantage na kiya jaaye, jab attendance mandatory nahi hai.` : ''}
 
-मेरे विवरण आपके संदर्भ हेतु नीचे प्रस्तुत हैं:
+${issueType === 'Assignment' || issueType === 'All' ? `-- Assignment submission deadlines bina penalty ke extend ki jaayen aur online ya flexible submission options provide kiye jaayen.` : ''}
 
-- नाम: ${fullName}  
-- रोल नंबर: ${rollNumber}  
-- नामांकन नंबर: ${enrollmentNumber}  
-- संपर्क नंबर: ${phoneNumber}  
+${issueType === 'Books' || issueType === 'All' ? `-- Pending study material distribution ka immediate solution nikala jaaye aur future mein books ki timely availability ensure ki jaaye.` : ''}
 
-मैं यह पत्र पूरे सम्मान और आशा के साथ प्रस्तुत कर रहा हूँ कि इन वास्तविक शैक्षणिक कठिनाइयों पर सहानुभूतिपूर्वक विचार करते हुए छात्रों के हित में उचित एवं न्यायसंगत निर्णय लिया जाएगा।
+Mere details aapke reference ke liye neeche mention kiye ja rahe hain:
 
-भवदीय,  
+- Name: ${fullName}  
+- Roll Number: ${rollNumber}  
+- Enrollment Number: ${enrollmentNumber}  
+- Contact Number: ${phoneNumber}  
+
+Main sincerely hope karta hoon ke in genuine academic issues ko sympathetically examine karke students ke best interest mein appropriate aur timely steps liye jaayenge.
+
+Yours sincerely,  
 ${fullName}
 `.trim();
 };

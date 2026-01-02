@@ -1,59 +1,73 @@
 /**
  * src/letters/letter.en.js
  * English Letter Template
- * Context: Post-result academic support & assignment-related concerns
+ * Context: Academic support with primary focus on Offline Classes
  * Input: studentData = { fullName, rollNumber, enrollmentNumber, phoneNumber, issueType }
  */
 
-const englishLetter = ({ fullName, rollNumber, enrollmentNumber, phoneNumber, issueType = 'Both' }) => {
+const englishLetter = ({ fullName, rollNumber, enrollmentNumber, phoneNumber, issueType = 'All' }) => {
   if (!fullName || !rollNumber || !enrollmentNumber || !phoneNumber) return '';
 
-  const booksSection = `
-In addition to the above, a large number of students are still deprived of essential prescribed study material for subjects including BEG-04, BEG-05, BHD-04, and BHD-05. Even at this advanced stage of the academic cycle, complete sets of books have not been provided to many students.
+  const offlineSection = `
+At the time of admission, I explicitly opted for the OFFLINE mode of the BA (ODL) programme. The clear and logical implication of this choice was that counselling sessions, academic discussions, and programme-related interactions would be conducted in physical mode at the Learner Support Centre. This understanding was not based on personal assumption, but is explicitly documented in the Programme Guide itself.
 
-The non-availability of these books has directly affected students’ ability to study course content, understand the syllabus framework, and prepare assignments in a meaningful academic manner. Expecting students to complete assignments on time without providing them with the officially prescribed study material is academically unjust and defeats the purpose of structured distance education. This situation has caused serious academic disadvantage and mental stress among students.
+As per the Programme Guide, counselling sessions are normally conducted at the centre, within the prescribed weekend academic schedule, with the specific purpose of addressing students’ subject-related academic difficulties. While counselling sessions are not described as conventional classroom teaching, their physical conduct at the centre is clearly envisaged as an integral part of the programme structure, rather than an optional or discretionary administrative arrangement.
+
+Despite this documented framework, all counselling sessions over the past two academic years have been conducted entirely in online mode, even though I had opted for the offline mode at the time of admission. During this period, no formal consent was sought from students, nor was any justified exception—consistent with the Programme Guide—formally communicated.
+
+As a result, the academic and institutional meaning of the offline mode has been substantially diluted in practice. The distinction between offline and online modes has been reduced to nomenclature alone, while the actual delivery mechanism has remained uniformly online.
+
+In the current academic year, which is my third year, no fundamental corrective change has been implemented. Instead, a 60:40 hybrid ratio has been introduced as an administrative decision, without any clear academic or regulatory basis cited in the Programme Guide. Under this hybrid arrangement, limited offline sessions have been provided only for a few selected language subjects, while counselling for other theory papers continues to be conducted exclusively online.
+
+Such selective and partial offline arrangements do not fulfil the core academic purpose of the offline mode. Rather, they create the impression that offline counselling is being offered as a concession or favour, instead of being treated as a promised and documented academic mode of delivery.
+
+It is respectfully clarified that offline counselling does not imply mandatory attendance or compulsory physical presence for all students. The essence of offline mode lies in the mode of delivery itself—namely, that counselling sessions are conducted offline—so that students who wish to attend physically at the centre are genuinely provided that opportunity, as envisaged in the Programme Guide.
+
+Predominantly online or hybrid models fail to meet this basic expectation, particularly after two consecutive academic years of complete online delivery. Consequently, the present arrangement appears inconsistent with both the spirit of the Programme Guide and the informed decision made by students at the time of admission.
+
+Accordingly, the demand is clear and unambiguous: for students who opted for offline mode, counselling sessions must be conducted 100% in offline mode—without arbitrary ratios, without restricting offline sessions to selective subjects, and without imposing hybrid models without student consent. This is not an additional facility or an extraordinary request, but the academic arrangement that was explicitly understood, documented, and expected at the time of admission, and which has not yet been consistently implemented.
+`;
+
+  const booksSection = `
+In addition to the above, a significant number of students continue to face difficulties due to the delayed or incomplete availability of prescribed study material, particularly for courses such as BEG-04, BEG-05, BHD-04, and BHD-05.
+
+The absence of timely and complete study material has adversely affected students’ ability to plan and prepare academically in a structured manner. Since self-study material forms the backbone of the ODL framework, any delay in its availability directly undermines the effectiveness of the programme.
 `;
 
   const assignmentSection = `
-With respect to assignments, students were informed after the declaration of results that assignments for language papers were to be submitted within an extremely short and rigid timeframe. As of now, the date of 28 December has already passed, and students have been informed that submissions beyond this date would attract penalties, as communicated by the concerned faculty.
+With regard to assignments, students were informed of submission requirements only after the declaration of results, and within an extremely limited preparation timeframe. The rigid deadlines, coupled with mandatory hardcopy submission, have posed serious practical challenges, especially for students residing far from the campus.
 
-It is important to highlight that the time provided for assignment preparation was insufficient for a large section of students. Many students could not realistically complete academic assignments of required quality within such a limited period, especially after a prolonged phase of academic uncertainty.
-
-The situation has further worsened due to the mandatory hardcopy submission requirement. Students are spread across distant regions including remote areas of Delhi, Delhi NCR, Dasna, Bijnor, Bihar, and even cities as far as Mumbai. For many students, reaching the campus itself requires two to three hours of travel one way. Several students, despite making sincere efforts to reach the college, arrived late by 20–30 minutes only to find that faculty members or coordinators were unavailable, forcing them to return without submitting assignments.
-
-In such cases, students not only lose valuable time and financial resources but are later informed that assignments can now only be submitted with penalties. This has resulted in deep frustration and a sense of helplessness among students.
-
-Furthermore, it has been observed that some students have been subjected to discouraging remarks for not attending offline classes. It is respectfully submitted that attendance in offline classes is not a mandatory criterion for assignment submission or award of marks in the ODL programme. Many students are unable to attend physical classes due to distance, employment, or personal constraints, and this should not result in academic or verbal discouragement.
-
-Considering these ground realities, the existing assignment submission mechanism has unintentionally excluded a significant number of students.
+Despite sincere efforts, many students were unable to submit assignments due to travel constraints, administrative unavailability, or lack of adequate academic guidance. Imposing penalties under such circumstances has resulted in considerable academic stress and insecurity among students.
 `;
 
   let issueText = '';
-  if (issueType === 'Books') issueText = booksSection;
+  if (issueType === 'OfflineClasses') issueText = offlineSection;
+  else if (issueType === 'Books') issueText = booksSection;
   else if (issueType === 'Assignment') issueText = assignmentSection;
-  else if (issueType === 'Both') issueText = assignmentSection + booksSection;
+  else if (issueType === 'All') issueText = offlineSection + assignmentSection + booksSection;
 
   return `
 Respected Sir,
 
-I, a student of the BA (ODL) programme under the Centre for Distance and Online Education, Jamia Millia Islamia, respectfully submit this representation to formally place certain pressing academic concerns on record.
+I, a student of the BA (ODL) programme under the Centre for Distance and Online Education, Jamia Millia Islamia, respectfully submit this representation to formally place certain important academic concerns on record.
 
-At the outset, I sincerely acknowledge and appreciate the declaration of the Second Year BA (ODL) results on 18 December 2025. After an extended period of uncertainty and repeated follow-ups by students, the release of results has finally brought clarity regarding subject-wise academic standing, including pass and backlog status.
+At the outset, I sincerely acknowledge the declaration of the Second Year BA (ODL) results on 18 December 2025. The release of results has provided long-awaited clarity to students regarding their academic standing.
 
-However, the declaration of results has simultaneously exposed several unresolved academic issues that now demand immediate and practical intervention, particularly concerning assignment submission and backlog preparation.
-
-Over the past two academic years, the BA (ODL) programme has suffered from an inconsistent academic timeline. While the first year extended over approximately 15–17 months, the second year was completed within a highly compressed span of merely 7–8 months. This irregular academic structure left students unable to anticipate deadlines, plan studies effectively, or prepare themselves mentally and academically for sudden announcements.
+However, the post-result phase has brought to light deeper structural issues within the programme, the most serious of which pertains to offline academic support for ODL students—an aspect that was clearly understood at the time of admission but has not been consistently implemented in practice.
 
 ${issueText}
 
-These concerns are raised not in opposition, but in the sincere interest of ensuring fairness, academic integrity, and accessibility for all distance learning students.
+These concerns are raised not in opposition, but in the interest of academic fairness, accessibility, and the credible and effective functioning of the BA (ODL) programme.
 
-In light of the circumstances explained above, I respectfully request your kind consideration of the following:
+In light of the above, I respectfully request your kind consideration of the following:
 
-${issueType !== 'Books' ? `-- Extension of the assignment submission deadline without any penalty, considering the insufficient preparation time provided.
--- Permission for online submission of assignments, or the introduction of a flexible alternative to hardcopy submission, so that students residing far from the campus are not unfairly disadvantaged.` : ''}
+${issueType === 'OfflineClasses' || issueType === 'All' ? `-- Counselling sessions for students who opted for offline mode should be conducted entirely in offline mode, without arbitrary hybrid ratios.
+-- A subject-wise, clearly structured, and well-communicated offline counselling schedule should be established.
+-- Formal clarification should be issued that non-attendance of offline counselling sessions does not result in academic disadvantage where attendance is not mandatory.` : ''}
 
-${issueType !== 'Assignment' ? `-- Immediate resolution of pending study material distribution and assurance that all prescribed books are provided to students well in advance of academic requirements.` : ''}
+${issueType === 'Assignment' || issueType === 'All' ? `-- Assignment submission deadlines should be extended without penalty, and flexible or online submission options should be provided.` : ''}
+
+${issueType === 'Books' || issueType === 'All' ? `-- Immediate resolution of pending study material distribution and assurance of timely availability of all prescribed books.` : ''}
 
 My details are provided below for your reference:
 
@@ -62,7 +76,7 @@ My details are provided below for your reference:
 - Enrollment Number: ${enrollmentNumber}  
 - Contact Number: ${phoneNumber}  
 
-I submit this representation with due respect and sincere hope that these genuine academic concerns will be examined sympathetically and addressed in the best interest of students enrolled in the BA (ODL) programme.
+I submit this representation with sincere hope that these genuine academic concerns will be examined sympathetically and addressed in the best interest of students.
 
 Yours sincerely,
 `.trim();

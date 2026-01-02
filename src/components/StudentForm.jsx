@@ -8,7 +8,7 @@ const initialFormState = {
   rollNumber: '',
   enrollmentNumber: '',
   phoneNumber: '',
-  issueType: 'Both' // Default selected option
+  issueType: 'OfflineClasses' // Default selected option
 };
 
 /**
@@ -170,9 +170,10 @@ const StudentForm = ({ onSubmit }) => {
             value={formData.issueType}
             onChange={handleChange}
           >
+            <option value="OfflineClasses">Offline Classes</option>
             <option value="Books">Books</option>
             <option value="Assignment">Assignment</option>
-            <option value="Both">Both</option>
+            <option value="All">All</option>
           </select>
         </div>
 
