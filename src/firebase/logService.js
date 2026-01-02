@@ -12,7 +12,7 @@ import { db } from "./firebaseConfig";
  * @param {Object} logData.studentData
  * @param {string} logData.language
  * @param {'pdf_download' | 'send_mail'} logData.action
- * @param {'Books' | 'Assignment' | 'Both'} logData.issueType
+ * @param {'OfflineClasses' |'Books' | 'Assignment' | 'All'} logData.issueType
  */
 export const logStudentActivity = (logData = {}) => {
   try {
@@ -22,7 +22,7 @@ export const logStudentActivity = (logData = {}) => {
       studentData,
       language = "en",
       action = "unknown",
-      issueType = "Both" // default to Both if not specified
+      issueType = "All" // default to Both if not specified
     } = logData;
 
     // Human-readable date & time (India-friendly)
