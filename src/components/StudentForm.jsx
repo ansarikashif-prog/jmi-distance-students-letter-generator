@@ -69,7 +69,7 @@ const StudentForm = ({ onSubmit }) => {
     <section className="form-card">
       <h2 className="form-title">Student Information</h2>
       <p className="form-description">
-        Details required to generate an assignment-related academic request letter.
+        Details required to generate academic request letter.
       </p>
 
       <form onSubmit={handleSubmit} noValidate>
