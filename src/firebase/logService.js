@@ -22,7 +22,7 @@ export const logStudentActivity = (logData = {}) => {
       studentData,
       language = "en",
       action = "unknown",
-      issueType = "All" // default to Both if not specified
+      issueType = "OfflineClasses" // default to Both if not specified
     } = logData;
 
     // Human-readable date & time (India-friendly)
